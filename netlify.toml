@@ -1,5 +1,5 @@
 [build]
-functions="functions/*"
+functions="/*"
 
 [functions]
 server="index.js"
