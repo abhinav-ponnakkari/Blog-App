@@ -1,0 +1,32 @@
+[build]
+  # Directory to change to before starting a build.
+  base = ""
+
+  # Directory where your built files are located
+  publish = "public"
+
+  # Command to build your project
+  command = "npm run build"
+
+# Environment variables for your project
+[build.environment]
+  # Add your MongoDB URI and any other required environment variables here
+  MONGODB_URI = "mongodb+srv://abhinavponnakkari123:pqI7q5sgN0MgNbYL@cluster0.xnlxr.mongodb.net/crud-blog-2?retryWrites=true&w=majority&appName=Cluster0"
+
+# Redirect all requests to your index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Settings for the production context
+[context.production]
+  command = "npm run build"
+
+# Settings for the deploy preview context
+[context.deploy-preview]
+  command = "npm run build"
+
+# Settings for the branch deploy context
+[context.branch-deploy]
+  command = "npm run build"
