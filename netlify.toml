@@ -6,7 +6,7 @@
   publish = "public"
 
   # Command to build your project
-  command = "npm run build"
+  command = "node index.js"
 
 # Environment variables for your project
 [build.environment]
@@ -21,12 +21,12 @@
 
 # Settings for the production context
 [context.production]
-  command = "npm run build"
+  command = "node index.js"
 
 # Settings for the deploy preview context
 [context.deploy-preview]
-  command = "npm run build"
+  command = "node index.js"
 
 # Settings for the branch deploy context
 [context.branch-deploy]
-  command = "npm run build"
+  command = "node index.js"
