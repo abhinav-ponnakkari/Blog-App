@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${post.title}</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="nav.js" defer></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav__logo"><a href="/"> Abhinav P</a></div>
+        <a class="nav__hamburger">
+            <span class="nav__hamburger__line"></span>
+            <span class="nav__hamburger__line"></span>
+            <span class="nav__hamburger__line"></span>
+        </a>
+        <div class="nav__menu">
+            <div>
+                <div class="register-div">
+                    <h1>Register</h1>
+                    <form id="register form">
+                        <input type="text" id="register-username" placeholder="Username" />
+                        <input type="text" id="register-password" placeholder="password" />
+                        <select id="register-role">
+                            <option value="reader"></option>
+                            <option value="admin"></option>
+                        </select>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+                <div id="logout-div">
+                    <h2 id="username">Username</h2>
+                    <button id="logout-button">Logout</button>
+                </div>
+                <div id="login-div">
+                    <h1>Login</h1>
+                    <form id="login-form">
+                        <input type="text" id="login-username" placeholder="Username" />
+                        <input type="password" id="login-password" placeholder="Password" />
+                    </form>
+                    <button id="login-button" type="submit">Login</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <img src="${post.imageUrl}" class="detail-post-img" />
+        <div class="post-content">
+          <h1 class="post-title">${post.title}</h1>
+          <div class="extra-info">
+            <p class="post-timestamp">${post.timestamp}</p>
+            <p class="post-author">${post.author}</p>
+          </div>
+          <p>${post.content}</p>
+        </div>
+
+    </main>
+    <footer>
+        <h3>Abhinav P</h3>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur exercitationem accusantium vitae
+            reprehenderit tempore voluptas similique, quaerat iusto iste eveniet?
+        </p>
+        <span>
+            <p>&copy;</p>
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </span>
+    </footer>
+</body>
+
+</html>
